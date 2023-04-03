@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Example</title>
+</head>
+<style>
+    /* 定义输入框的样式 */
+    .input-textarea {
+    width: 400px; /* 设置输入框宽度为 100% */
+    height: auto; /* 设置输入框高度自适应 */
+    min-height: 100px; /* 设置输入框最小高度 */
+    word-wrap: break-word; /* 设置文本自动换行 */
+    white-space: pre-wrap; /* 设置文本保留空白符和换行符 */
+    padding: 10px; /* 设置输入框内边距 */
+    font-size: 1px; /* 设置输入框文本字号 */
+    border: 1px solid #ccc; /* 设置输入框边框 */
+    border-radius: 4px; /* 设置输入框圆角 */
+    box-sizing: border-box; /* 设置输入框的盒模型为 border-box */
+    resize: none; /* 禁止输入框拖动调整大小 */
+    text-align: left; /* 设置输入框中文本的对齐方式为左对齐 */
+    }
+
+    /* 定义下拉框的样式 */
+    select {
+      width: 250px;
+      padding: 8px;
+      margin-right: 20px;
+      margin-bottom: 14px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+      background-color: #fff;
+      background-image: none;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+
+    /* 定义下拉框的选项的样式 */
+    select option {
+      font-size: 14px;
+    }
+    
+   /* 定义按钮的样式 */
+  button {
+    margin-top: 20px; /* 设置按钮的上间距为 20 像素 */
+    background-color: #166EF7; /* 设置按钮背景颜色 */
+    color: white; /* 设置按钮文本颜色 */
+    border: none; /* 取消按钮边框 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    text-align: center; /* 设置按钮文本居中 */
+    text-decoration: none; /* 取消按钮文本下划线 */
+    display: inline-block; /* 将按钮设置为行内元素 */
+    font-size: 16px; /* 设置按钮文本字号 */
+    border-radius: 4px; /* 设置按钮圆角 */
+    cursor: pointer; /* 设置按钮鼠标指针为手型 */
+  }
+  
+  /* 标题样式 */
+    h3 {
+      font-size: 16px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    
+  </style>
+<body>
+  <h3>描述你想要的画面内容（英文）</h3>
+  <textarea id="input1" oninput="copyText()" class="input-textarea" rows="3" placeholder="前面可以加上参考图的url，和描述文案用“逗号+空格”隔开哦～"></textarea>
+<br>
+  <h3>1、风格</h3>
+   <select id="select1.1" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+
+   <select id="select1.2" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+
+   <select id="select1.3" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+  <br>
+   <select id="select1.4" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+
+   <select id="select1.5" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+
+   <select id="select1.6" onchange="copyText()">
+    <option value="">请选择风格</option>
+
+    <option value="3D style, C4D">3D 3D风格</option>
+
+    <option value="90s video game">90s video game 90年代电视游戏</option>
+
+    <option value="Abstract Art">Abstract Art 抽象表现主义</option>
+
+    <option value="abstractionism">abstractionism 抽象主义</option>
+  </select>
+  <br>
+      <h3>2、材质/品质</h3>
+      <select id="select2" onchange="copyText()">
+        <option value="">请选择材质/品质</option>
+        <option value="Amber">Amber 琥珀</option>
+
+    <option value="Amethyst">Amethyst 紫水晶</option>
+
+    <option value="Antique">Antique 做旧</option>
+
+    <option value="Basalt">Basalt 玄武岩</option>
+
+    <option value="Brushed">Brushed 拉丝</option>
+
+    <option value="Cuprite">Cuprite 赤铜</option>
+
+    <option value="Diamond">Diamond 钻石</option>
+
+    <option value="Ebony">Ebony 乌木</option>
+
+    <option value="Embossing">Embossing 浮雕 (浅)</option>
+
+    <option value="Engraving">Engraving 雕(中度)</option>
+
+    <option value="Etching">Etching 蚀刻(浅)</option>
+
+    <option value="Granite">Granite 花岗岩</option>
+
+    <option value="Hammered">Hammered 捶打</option>
+
+    <option value="Heliodor">Heliodor 太阳石</option>
+
+    <option value="High Polished">High Polished 抛光</option>
+
+    <option value="Jade">Jade 玉石</option>
+
+    <option value="Ivory">Ivory 象牙材质</option>
+
+    <option value="Marble">Marble 大理石</option>
+
+    <option value="Matte">Matte 哑光</option>
+
+    <option value="Obsidian">Obsidian 黑曜石</option>
+
+    <option value="Pearl">Pearl 珍珠</option>
+
+    <option value="Pine">Pine 松木</option>
+
+    <option value="Ruby">Ruby 红宝石</option>
+
+    <option value="Sandblasted">Sandblasted 喷砂</option>
+
+    <option value="Satin">Satin 缎面</option>
+
+</select>
+<br>
+      <h3>3、光线效果</h3>
+      <select id="select3" onchange="copyText()">
+        <option value="">请选择光线效果</option>
+        <option value="atmospheric lighting">atmospheric lighting气氛照明</option>
+
+    <option value="Back lighting">Back lighting背光照明</option>
+
+    <option value="bisexual lighting">bisexual lighting双性照明</option>
+
+    <option value="cinematic lighting">cinematic lighting/ Dramatic lighting电影灯光破剧灯光</option>
+
+    <option value="clean background trending">clean background trending干净的背景趋势</option>
+
+    <option value="Cold light">Cold light冷光</option>
+
+    <option value="Crepuscular Ray">Crepuscular Ray黄昏射线</option>
+
+    <option value="fluorescent lighting">fluorescent lighting荧光灯</option>
+
+    <option value="Golden hour light">Golden hour light黄金时段光</option>
+
+    <option value="mapping light">mapping light映射光</option>
+
+    <option value="mood lighting">mood lighting情绪照明</option>
+
+    <option value="Morning light">Morning light晨光</option>
+
+    <option value="outer space view">outer space view外太空观</option>
+
+    <option value="rays of shimmering light">rays of shimmering light/ morning light微光/晨光</option>
+
+    <option value="reflection light">reflection light反光</option>
+
+    <option value="Rembrandt light">Rembrandt light伦勃朗光</option>
+
+    <option value="Rembrandt Lighting">Rembrandt Lighting伦勃朗照明</option>
+
+    <option value="Rim light">Rim light轮廓光</option>
+
+    <option value="rim lights">rim lights边缘灯</option>
+
+    <option value="Soft illuminaotion">Soft illuminaotion/ soft lights柔和的照明/柔光</option>
+
+    <option value="Split Lighting">Split Lighting分体照明</option>
+
+    <option value="Sun light">Sun light太阳光</option>
+
+    <option value="Top light">Top light顶光</option>
+
+    <option value="volumetric lighting">volumetric lighting层次光</option>
+
+    <option value="Warm light">Warm light暖光</option>
+
+</select>
+<br>
+      <h3>4、构图关键词</h3>
+      <select id="select4" onchange="copyText()">
+        <option value="">请选择构图</option>
+        <option value="MCU">Medium Close-Up (MCU): 中特写</option>
+
+    <option value="MLS">Medium Long Shot (MLS): 中远暴</option>
+
+    <option value="MS">Medium Shot (MS): 中景</option>
+
+    <option value="microscopic view">Microscopic view: 微观</option>
+
+    <option value="over the shoulder shot">Over the shoulder shot: 过肩景</option>
+
+    <option value="portrait">Portrait: 肖像</option>
+
+    <option value="product view">Product view: 产品视图</option>
+
+    <option value="profile">Profile: 侧面</option>
+
+    <option value="rule of thirds composition">Rule of thirds composition: 三分法构图</option>
+
+    <option value="satellite view">Satellite view: 卫星视图</option>
+
+    <option value="scenery shot">Scenery shot: 风景照</option>
+
+    <option value="S-shaped composition">S-shaped composition: S型构图</option>
+
+    <option value="super side angle">Super side angle: 超博角</option>
+
+    <option value="symmetrical">Symmetrical: 对称</option>
+
+    <option value="symmetrical body">Symmetrical body: 对称的身体</option>
+
+    <option value="symmetrical face">Symmetrical face: 对称的脸</option>
+
+    <option value="symmetrical composition">Symmetrical composition: 对称构图</option>
+
+     <option value="third-person perspective">Third-person perspective: 第三人称视角</option>
+
+    <option value="Three-point perspective">Three-point perspective: 三点透视</option>
+
+     <option value="tight shot">Tight shot: 近距离景</option>
+
+    <option value="tilt-shift">Tilt-shift: 倾斜移位</option>
+
+    <option value="Top view">Top view: 顶视图</option>
+
+    <option value="two shot">Two shot (2S): 两景</option>
+
+    <option value="three shot">Three shot (3S): 三景</option>
+
+    <option value="group shot">Group shot (GS): 群景</option>
+
+    <option value="two-point perspective">Two-point perspective: 两点透视</option>
+
+    <option value="ultra wide shot">Ultra wide shot: 超广角镜头</option>
+
+    <option value="ultrawide shot">Ultrawide shot: 超广角</option>
+
+    <option value="up view">Up view: 俯视图</option>
+
+    <option value="Waist Shot">Waist Shot (WS): 腰部以上</option>
+
+    <option value="wide view">Wide view: 广角</option>
+
+</select>
+<br>
+      <h3>5、情绪关键词</h3>
+      <select id="select5" onchange="copyText()">
+        <option value="">请选择画面情绪</option>
+        <option value="afraid">Afraid: 害怕</option>
+
+    <option value="angry">Angry: 生气</option>
+
+    <option value="anxious">Anxious: 焦虑的</option>
+
+    <option value="Brutal">Brutal: 残酷的，破碎的</option>
+
+    <option value="dark">Dark: 黑暗的</option>
+
+    <option value="depressed">Depressed: 沮丧</option>
+
+    <option value="disgusted">Disgusted: 厌恶</option>
+
+    <option value="dramatic contrast">Dramatic contrast: 强烈对比的</option>
+
+    <option value="elated">Elated: 高兴地</option>
+
+    <option value="epic detail">Epic detail: 超细节的</option>
+
+    <option value="excited">Excited: 兴奋</option>
+
+    <option value="fearful">Fearful: 令人恐惧的</option>
+
+    <option value="happy">Happy: 高兴</option>
+
+    <option value="happy">Happy: 鲜艳的，浅色的</option>
+
+    <option value="hateful">Hateful: 令人憎恨的</option>
+
+    <option value="hopeful">Hopeful: 充满希望的</option>
+
+    <option value="moody">Moody: 暗黑的</option>
+
+    <option value="surprised">Surprised: 惊喜</option>
+
+    <option value="upset">Upset: 难过的</option>
+
+    <option value="Warm light">Warm light: 暖光</option>
+
+</select>
+<br>
+      <h3>6、色彩/色调</h3>
+      <select id="select6" onchange="copyText()">
+        <option value="">请选择色彩色调</option>
+        <option value="black">Black: 黑色</option>
+
+    <option value="black background centered">Black background centered: 黑色背景为中心</option>
+
+    <option value="blue">Blue: 蓝色</option>
+
+    <option value="brown">Brown: 棕色</option>
+
+    <option value="colourful color matching">Colourful color matching: 多色彩搭配</option>
+
+    <option value="contrast">Contrast: 对比度</option>
+
+    <option value="Gold and silver tone">Gold and silver tone: 金银色调</option>
+
+    <option value="grey">Grey: 灰色</option>
+
+    <option value="green">Green: 绿色</option>
+
+    <option value="Luminance">Luminance: 亮度</option>
+
+    <option value="monotone">Monotone: 单色调</option>
+
+    <option value="muted tone">Muted tone: 谈色调</option>
+
+    <option value="neon shades">Neon shades: 霓虹色调</option>
+
+    <option value="orange">Orange: 橙色</option>
+
+    <option value="purple">Purple: 紫色</option>
+
+    <option value="red">Red: 红色</option>
+
+    <option value="red and black tone">Red and black tone: 红黑色调</option>
+
+    <option value="rich color palette">Rich color palette: 多彩的色调</option>
+
+    <option value="syan">Syan: 青色</option>
+
+    <option value="tan">Tan: 褐色</option>
+
+    <option value="the high-purity tone">The high-purity tone: 高纯度色调</option>
+
+    <option value="the low-purity tone">The low-purity tone: 低纯度色调</option>
+
+    <option value="white">White: 白色</option>
+
+    <option value="white and pink tone">White and pink tone: 白色和粉红色调</option>
+
+    <option value="yellow">Yellow: 黄色</option>
+
+    <option value="yellow and black tone">Yellow and black tone: 黄黑色调</option>
+
+</select>
+<br>
+      <h3>7、国风元素（如需要）</h3>
+      <select id="select7" onchange="copyText()">
+        <option value="">请选择国风元素</option>
+        <option value="Bamboo">Bamboo竹子</option>
+
+    <option value="Cheongsam">Cheongsam旗袍</option>
+
+    <option value="Chinese costume">Chinese costume中国风服装</option>
+
+    <option value="Chinese lanterns">Chinese lanterns灯笼</option>
+
+    <option value="Chinese phoenix">Chinese phoenix中国凤凰</option>
+
+    <option value="Cloisonne">Cloisonne景泰蓝</option>
+
+    <option value="Embroidered">Embroidered绣花的</option>
+
+    <option value="Flute">Flute笛子</option>
+
+    <option value="Forbidden City">Forbidden City紫禁城</option>
+
+    <option value="Gardens">Gardens园林</option>
+
+    <option value="Hanfu">Hanfu汉服</option>
+
+    <option value="Jade">Jade玉</option>
+
+    <option value="Kung Fu">Kung Fu功夫</option>
+
+    <option value="Kunqu Opera">Kunqu Opera昆曲</option>
+
+    <option value="Kylin">Kylin麒麟</option>
+
+    <option value="Loong">Loong中国龙</option>
+
+    <option value="Lotus">Lotus莲花</option>
+
+    <option value="Mahjong">Mahjong麻将</option>
+
+    <option value="Pavilion">Pavilion亭子</option>
+
+    <option value="Peony">Peony牡丹</option>
+
+    <option value="Plum">Plum梅花</option>
+
+    <option value="Porcelain">Porcelain瓷</option>
+
+    <option value="Summer Palace">Summer Palace颐和园</option>
+
+    <option value="Wing Tsun">Wing Tsun咏春</option>
+
+    <option value="Wuxia">Wuxia武侠</option>
+
+    <option value="Temples">Temples寺庙</option>
+
+    <option value="Warm light">Warm light暖光</option>
+
+</select>
+<br>
+      <h3>8、画面精细度【重要】</h3>
+      <select id="select8" onchange="copyText()">
+        <option value="">请选择精细度</option>
+        <option value="1080P">1080P</option>
+
+    <option value="2K">2K</option>
+
+    <option value="4K">4K</option>
+
+    <option value="8K">8K</option>
+
+    <option value="8k smooth">8k smooth8流畅</option>
+
+    <option value="FHD">FHD全高清</option>
+
+    <option value="high detail">high detail高细节</option>
+
+    <option value="high resolution">high resolution高分辨率</option>
+
+<option value="hyper quality">hyper quality高品质</option>
+
+</select>
+<br>
+      <h3>9、尺寸参数【重要】</h3>
+      <select id="select9" onchange="copyText()">
+        <option value="">请选择尺寸参数</option>
+         <option value="--ar 1:1">--aspect 1:1默认纵横比</option>
+
+    <option value="--ar 1:2">--aspect 1:2</option>
+
+    <option value="--ar 3:2">--aspect 3:2</option>
+
+    <option value="--ar 4:3">--aspect 4:3</option>
+
+    <option value="--ar 5:4">--aspect 5:4常见的框架和打印比例</option>
+
+    <option value="--ar 7:4">--aspect 7:4靠近高清电视屏幕和智能手机屏幕</option>
+
+    <option value="--ar 16:9">--aspect 16:9</option>
+
+</select>
+<br>
+<h3>Prompt生成结果</h3>
+<textarea id="input2" class="input-textarea" rows="3"></textarea>
+<br>
+<button onclick="copyToClipboard()">复制Prompt</button>
+
+<script>
+function copyText() {
+  /* 获取输入框和下拉框的值 */
+  var input1 = document.getElementById("input1").value;
+  var selects = document.querySelectorAll("[id^=select]");
+
+  /* 拼接输入框和下拉框的值 */
+  var value = input1 + ', ';
+  for (var i = 0; i < selects.length; i++) {
+    if (selects[i].value !== '') {
+      value += selects[i].value + ', ';
+    }
+  }
+
+  /* 删除最后一个逗号和空格 */
+  value = value.slice(0, -2);
+
+  /* 删除开头的空格和逗号 */
+  while (value.charAt(0) === ' ' || value.charAt(0) === ',') {
+    value = value.substring(1);
+  }
+
+  /* 填充输入框2的值 */
+  document.getElementById("input2").value = value;
+}
+
+function copyToClipboard() {
+  var copyText = document.getElementById("input2");
+  copyText.select();
+  document.execCommand("copy");
+  alert("已复制到剪贴板！");
+}
+</script>
+
+
+</body>
+</html>
